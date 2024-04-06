@@ -1,0 +1,37 @@
+1. mkdir SI_2024_lab1_223052
+2. cd SI_2024_lab1_223052
+3. git init
+4. git remote origin https://github.com/marijacvetanovskaa/SI_2024_lab1_223052.git
+5. touch README.md
+6. nano README.md
+7. git add . 
+8. git commit -m 'Initial commit'
+9. git config --global user.email "marija.cvetanovska.2@students.finki.ukim.mk"
+10.git add .
+11.git commit -m 'Add starter code'
+12.git push origin master
+13.git branch bug1
+14.git branch bug2
+15.git checkout bug1
+16.git add .
+17.git commit -m 'Fix wrong condition in filterOddLengthStrings'
+18.gi add SILab1_2.java
+19.git commit -m 'Fix wrong condition in makeBigStringFrom'
+20.git add SILab1.Main.java
+21.git commit -m 'Call method makeBigStringFrom in main class'
+22.git push origin bug1
+23.git checkout bug2
+24.git push origin bug2
+25.git checkout master
+25.git merge bug1
+26.git push origin master
+27.git checkout bug2
+28.git rebase master
+29.git merge bug2
+30.git push origin master
+31.touch logs.txt
+32.nano logs.txt
+
+
+ 
+ 

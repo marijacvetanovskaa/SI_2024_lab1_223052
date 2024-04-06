@@ -1,0 +1,430 @@
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git add .
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git commit -m 'Add starter code'
+[master 82b0c8d] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git push origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git push origin master
+
+
+
+
+
+
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.11 KiB | 1.11 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/marijacvetanovskaa/SI_2024_lab1_223052.git
+ * [new branch]      master -> master
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git branch
+* master
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git branch help
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git help -a
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                     Add file contents to the index
+   am                      Apply a series of patches from a mailbox
+   archive                 Create an archive of files from a named tree
+   bisect                  Use binary search to find the commit that introduced a bug
+   branch                  List, create, or delete branches
+   bundle                  Move objects and refs by archive
+   checkout                Switch branches or restore working tree files
+   cherry-pick             Apply the changes introduced by some existing commits
+   citool                  Graphical alternative to git-commit
+   clean                   Remove untracked files from the working tree
+   clone                   Clone a repository into a new directory
+   commit                  Record changes to the repository
+   describe                Give an object a human readable name based on an available ref
+   diff                    Show changes between commits, commit and working tree, etc
+   fetch                   Download objects and refs from another repository
+   format-patch            Prepare patches for e-mail submission
+   gc                      Cleanup unnecessary files and optimize the local repository
+   gitk                    The Git repository browser
+   grep                    Print lines matching a pattern
+   gui                     A portable graphical interface to Git
+   init                    Create an empty Git repository or reinitialize an existing one
+   log                     Show commit logs
+   maintenance             Run tasks to optimize Git repository data
+   merge                   Join two or more development histories together
+   mv                      Move or rename a file, a directory, or a symlink
+   notes                   Add or inspect object notes
+   pull                    Fetch from and integrate with another repository or a local branch
+   push                    Update remote refs along with associated objects
+   range-diff              Compare two commit ranges (e.g. two versions of a branch)
+   rebase                  Reapply commits on top of another base tip
+   reset                   Reset current HEAD to the specified state
+   restore                 Restore working tree files
+   revert                  Revert some existing commits
+   rm                      Remove files from the working tree and from the index
+   scalar                  A tool for managing large Git repositories
+   shortlog                Summarize 'git log' output
+   show                    Show various types of objects
+   sparse-checkout         Reduce your working tree to a subset of tracked files
+   stash                   Stash the changes in a dirty working directory away
+   status                  Show the working tree status
+   submodule               Initialize, update or inspect submodules
+   switch                  Switch branches
+   tag                     Create, list, delete or verify a tag object signed with GPG
+   worktree                Manage multiple working trees
+
+Ancillary Commands / Manipulators
+   config                  Get and set repository or global options
+   fast-export             Git data exporter
+   fast-import             Backend for fast Git data importers
+   filter-branch           Rewrite branches
+   mergetool               Run merge conflict resolution tools to resolve merge conflicts
+   pack-refs               Pack heads and tags for efficient repository access
+   prune                   Prune all unreachable objects from the object database
+   reflog                  Manage reflog information
+   remote                  Manage set of tracked repositories
+   repack                  Pack unpacked objects in a repository
+   replace                 Create, list, delete refs to replace objects
+
+Ancillary Commands / Interrogators
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git help branch
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git branch bug1
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git branch bug2
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git checkout -b bug1
+fatal: a branch named 'bug1' already exists
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git add .
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git commit -m 'Fix wrong condition in filterOddLengthStrings'
+[bug1 8735631] Fix wrong condition in filterOddLengthStrings
+ 6 files changed, 40 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 SI_2024_lab1_223052.iml
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git commit -m 'Fix wrong condition in makeBigStringFrom'
+[bug2 cde569a] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git commit -m 'Call method makeBigStringFrom in main class'
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git commit -m 'Call method makeBigStringFrom in main class'
+[bug1 5d5fb69] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git push origin bug1
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.80 KiB | 921.00 KiB/s, done.
+Total 12 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/marijacvetanovskaa/SI_2024_lab1_223052/pull/new/bug1
+remote:
+To https://github.com/marijacvetanovskaa/SI_2024_lab1_223052.git
+ * [new branch]      bug1 -> bug1
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git push bug2
+fatal: 'bug2' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git push origin bug2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/marijacvetanovskaa/SI_2024_lab1_223052/pull/new/bug2
+remote:
+To https://github.com/marijacvetanovskaa/SI_2024_lab1_223052.git
+ * [new branch]      bug2 -> bug2
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git merge bug1
+Updating 82b0c8d..5d5fb69
+Fast-forward
+ .idea/.gitignore        |  8 ++++++++
+ .idea/misc.xml          |  6 ++++++
+ .idea/modules.xml       |  8 ++++++++
+ .idea/vcs.xml           |  6 ++++++
+ SILab1Main.java         |  1 +
+ SILab1_1.java           |  2 +-
+ SI_2024_lab1_223052.iml | 11 +++++++++++
+ 7 files changed, 41 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 SI_2024_lab1_223052.iml
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/marijacvetanovskaa/SI_2024_lab1_223052.git
+   82b0c8d..5d5fb69  master -> master
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git pull origin master
+From https://github.com/marijacvetanovskaa/SI_2024_lab1_223052
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ .idea/.gitignore        |  8 ++++++++
+ .idea/misc.xml          |  6 ++++++
+ .idea/modules.xml       |  8 ++++++++
+ .idea/vcs.xml           |  6 ++++++
+ SILab1Main.java         |  1 +
+ SILab1_1.java           |  2 +-
+ SI_2024_lab1_223052.iml | 11 +++++++++++
+ 7 files changed, 41 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 SI_2024_lab1_223052.iml
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git rebase master
+Successfully rebased and updated refs/heads/bug2.
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git merge bug2
+Updating 5d5fb69..ee416b8
+Fast-forward
+ SILab1_2.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/marijacvetanovskaa/SI_2024_lab1_223052.git
+   5d5fb69..ee416b8  master -> master
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ touch logs.txt
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ history
+    1  ld
+    2  ls
+    3  cd SI_2024_lab1_223052/
+    4  ls
+    5  touch README.md
+    6  nano
+    7  nano README.md
+    8  cat README.md
+    9  git add .
+   10  git commit -m 'Initial commit'
+   11  git config --global user.email "marija.cvetanovska.2@students.finki.ukim.mk"
+   12  git commit -m 'Initial commit'
+   13  cd ..
+   14  ls
+   15  ls -la
+   16  cd SI_2024_lab1_223052/
+   17  clear
+   18  ls
+   19  git add .
+   20  git commit -m 'Add starter code'
+   21  git push
+   22  git push origin/master
+   23  git push origin master
+   24  git branch
+   25  git
+   26  git branch help
+   27  git help -a
+   28  git help branch
+   29  git branch bug1
+   30  git branch bug2
+   31  git checkout -b bug1
+   32  git checkout bug1
+   33  git add .
+   34  git commit -m 'Fix wrong condition in filterOddLengthStrings'
+   35  git checkout bug2
+   36  git add SILab1_2.java
+   37  git commit -m 'Fix wrong condition in makeBigStringFrom'
+   38  git checkout bug1
+   39  git commit -m 'Call method makeBigStringFrom in main class'
+   40  git add SILab1Main.java
+   41  git commit -m 'Call method makeBigStringFrom in main class'
+   42  git push origin bug1
+   43  git checkout bug2
+   44  git push bug2
+   45  git push origin bug2
+   46  git checkout master
+   47  git merge bug1
+   48  git push origin master
+   49  git checkout bug2
+   50  git pull origin master
+   51  git rebase master
+   52  git checkout master
+   53  git merge bug2
+   54  git push origin master
+   55  touch logs.txt
+   56  history
+
+Marija@Marija MINGW64 ~/SI_2024_lab1_223052 (master)
+$ nano logs.txt
+
+Недостасува делот на logs пред да биде направена командата clear затоа ја извршив командата history со која е дадена историја на сите команди и пред командата clear.
